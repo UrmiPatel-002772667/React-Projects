@@ -3,7 +3,7 @@ import { useLoaderData, json, defer, Await } from 'react-router-dom';
 
 import EventsList from '../components/EventsList';
 
-export default function EventsPage() {
+function EventsPage() {
   const { events } = useLoaderData();
 
   return (
@@ -15,12 +15,21 @@ export default function EventsPage() {
   );
 }
 
+export default EventsPage;
+
 async function loadEvents() {
   const response = await fetch('http://localhost:8080/events');
 
   if (!response.ok) {
+    // return { isError: true, message: 'Could not fetch events.' };
+    // throw new Response(JSON.stringify({ message: 'Could not fetch events.' }), {
+    //   status: 500,
+    // });
     throw json(
-      { message: 'Could not fetch events.' }, {status: 500}
+      { message: 'Could not fetch events.' },
+      {
+        status: 500,
+      }
     );
   } else {
     const resData = await response.json();

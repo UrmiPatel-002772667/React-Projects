@@ -57,7 +57,17 @@
   - Once assigned, their values cannot be changed.
   - Example: `const PI = 3.14;` // PI cannot be reassigned
 
+## Promises 
+- Promises are a way to handle asynchronous operations in JavaScript. They represent a value that may be available now, in the future, or never. A promise has three states:
+  - **Pending**: The initial state, neither fulfilled nor rejected.
+  - **Fulfilled**: The operation completed successfully.
+  - **Rejected**: The operation failed.
 
+## Async/Await
+- Async/Await is syntactic sugar built on top of promises, introduced in ES8 (ECMAScript 2017). It allows you to write asynchronous code in a synchronous style, making it more readable and easier to understand.
+  - **Async Functions**: An async function is a function that returns a promise. It is declared using the async keyword.
+  - **Await Keyword**: The await keyword can only be used inside an async function. It makes the function pause the execution until the promise is resolved.
+    
 # What is ReactJS?
 - **React** is a JavaScript library designed for building user interfaces (UI). It allows developers to create complex UIs from small, isolated pieces of code called components.
 - **UI Composition**: UIs in React are built from small units like buttons, text, and images. React enables these units to be combined into reusable, nestable components, making development more efficient and organized.

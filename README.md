@@ -251,7 +251,7 @@ const username = "JohnDoe";
 - **Props**: Arguments passed into React components. They allow parent components to pass data to child components.
 - **Static and Dynamic Props**: Props can change over time and are not static.
 - **Immutability**: Props are read-only and cannot be modified by the receiving component.
-**Example**
+- **Example**:
 ```jsx
 function Avatar({ person, age }) {
   return (
@@ -260,13 +260,15 @@ function Avatar({ person, age }) {
       <p>{age}</p>
     </div>
   );
-}	function Profile(props) {
+}
+function Profile(props) {
   return (
     <div className="card">
       <Avatar {...props} />
     </div>
   );
-}	export default function Profile() {
+}
+export default function Profile() {
   return (
     <div>
       <Avatar age={23} person={{ name: 'Urmi Patel' }} />
@@ -276,8 +278,8 @@ function Avatar({ person, age }) {
 ```
 
 ### Using Children
-For components that accept a single piece of renderable content, using the children prop can be more natural.
-**Example**
+- For components that accept a single piece of renderable content, using the children prop can be more natural.
+- **Example**
 ```jsx
 function Card({ children }) {
   return <div>{children}</div>;
@@ -347,17 +349,29 @@ return <ul>{listItems}</ul>;
 - **Consistency**: Keys should not change.
 
 ### Pure Components
-- **Pure Functions**: Functions that only perform calculations and do not alter objects or variables outside their scope.
-- **Deterministic**: Given the same inputs, a pure function always returns the same output.
-
+- **Pure Functions**:
+  - **Deterministic**: Always returns the same output for the same input.
+  - **Has no side effects**: This means it doesn't modify any state or data outside of its scope and does not rely on or alter external variables or states.
+- **Example**:
+  ```jsx
+  import React from 'react';
+  const Greeting = ({ name }) => {
+    return <h1>Hello, {name}!</h1>;
+  };
+  export default Greeting;
+  ```
 ## The Render Tree
 - **Definition**: Composed only of React components (not HTML components) and represents the nested relationships between React components during a single render.
-- **Conditional Rendering**: The tree can change with different renders and prop values, affecting which components are rendered.
 - **Performance**: Identifying top-level and leaf components can help in understanding and debugging rendering performance.
 
 **Example Render Tree**:
 
 ![image](https://github.com/user-attachments/assets/7e5beb16-51a7-459b-a6d4-3c15144d7e53)
+
+- **Conditional Rendering**: The tree can change with different renders and prop values, affecting which components are rendered.
+**Example Conditional Rendering Tree**:
+
+![image](https://github.com/user-attachments/assets/fc9c76b3-2b80-4696-8fee-eedc37353681)
 
 ## The Module Dependency Tree
 - **Definition**: Represents the dependencies between modules in a React app.

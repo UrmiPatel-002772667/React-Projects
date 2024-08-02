@@ -205,8 +205,8 @@ JSX is a syntax extension for JavaScript that allows you to write HTML-like mark
   ```
 
 ### Using Curly Braces
-JSX allows you to embed JavaScript expressions within curly braces `{}`.
-**Examples:**
+- JSX allows you to embed JavaScript expressions within curly braces `{}`.
+- **Examples:**
 ```jsx
 export default function TodoList() {
   const name = 'Urmi Patel';
@@ -215,11 +215,11 @@ export default function TodoList() {
   );
 }
 ```
-	• Text inside JSX Tags:
+- **Text inside JSX Tags**:
 ```jsx 
 <h1>{name}'s To Do List</h1>
 ```
-	• Attributes:
+- **Attributes**:
 ```jsx 
 <img src={avatar} />
 ```

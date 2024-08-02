@@ -446,7 +446,7 @@ const [index, setIndex] = useState(0);
    - Build components to render data models.
    - Use props to pass data from parent to child components.
 3. **Determine the State Representation**:
-   - Apply the DRY principle to state management.
+   - Apply the DRY(Don't Repeat Yourself) principle to state management.
    - **State vs. Props**:
      - **Props**: Passed from parent to child, does not change over time.
      - **State**: Component's memory, changes in response to interactions.

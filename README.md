@@ -467,9 +467,6 @@ const [index, setIndex] = useState(0);
 ### Bleeding-Edge Frameworks
 - **Next.js (App Router)**: A redesigned version of the Next.js APIs focusing on full-stack architecture.
 
-#### Side Effects
-- Tasks that don't affect the current render cycle should be handled carefully to maintain predictable component behavior.
-
 ## Hooks in React
 
 ### useState
@@ -542,9 +539,9 @@ const inputRef = useRef(null);
 - **Usage**: Ideal for complex state transitions.
 
 ### Side Effects
-- **Definition**: Tasks that don’t affect the component render cycle.
+- **Definition**: Tasks that don't affect the current render cycle should be handled carefully to maintain predictable component behavior.
 - **Example**: Fetching data, subscribing to services.
-
+ 
 ## Memoization and Virtual DOM
 
 ### Memoization

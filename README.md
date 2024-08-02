@@ -620,13 +620,8 @@ class Product extends Component {
 
 **Redux**: A state management system for managing cross-component or app-wide state.
 
-### Core Concepts
-- **Actions**: Payloads of information that send data from your application to your Redux store.
-- **Reducers**: Functions that take the current state and an action, then return a new state.
-- **Store**: Holds the whole state tree of the application.
-
 ## Visualizing Redux Flow
-1. **Action**: Dispatched to the store.
+1. **Action**: Payloads of information that send data from your application to your Redux store.
 2. **Reducer Function**: Receives the action and the current state, then returns the new state.
 3. **Store**: The central repository for the state, updated by the reducer.
 4. **Components**: Subscribed to the store to receive updates and render the UI accordingly.
@@ -634,7 +629,7 @@ class Product extends Component {
 ## Redux Reducer Function
 - **Role**: It is a pure function that takes the current state and an action as inputs and returns a new state object.
 - **Immutability**: Important because objects and arrays are reference values in JavaScript. Changes to an object property affect all references to that object.
-**Example**:
+- **Example**:
 ```jsx
 function reducer(state, action) {
   switch (action.type) {
@@ -650,7 +645,7 @@ function reducer(state, action) {
 ## Thunk:
 - **Definition**: A function that delays an action until later.
 - **Usage**: In Redux, it’s an action creator function that does not return the action itself but another function which eventually dispatches the action.
-**Example**:
+- **Example**:
 ```jsx
 const fetchUser = (userId) => {
   return (dispatch) => {
@@ -664,25 +659,23 @@ const fetchUser = (userId) => {
 
 ## Authentication
 
-### Server-Side Sessions vs. Authentication Tokens
-
-#### Server-Side Sessions
+### Server-Side Sessions
 - **Storage**: Unique identifier stored on the server and sent to the client.
 - **Client-Side**: Sends the identifier with requests to protected resources.
 - **Server-Side**: Validates the identifier.
 
-#### Authentication Tokens
+### Authentication Tokens
 - **Creation**: Token created (but not stored) on the server and sent to the client.
 - **Client-Side**: Attaches the token to future requests.
 - **Server-Side**: Verifies the token.
 
-### Client (Browser) vs. Server (Backend)
+## Client (Browser) vs. Server (Backend)
 
-#### Client (Browser)
+### Client (Browser)
 - **SPAs**: Most React apps are single-page applications (SPAs) served by a server decoupled from the backend.
 - **Routing**: Handled on the client side, communicates with the backend as needed.
 
-#### Server (Backend)
+### Server (Backend)
 - **Decoupled**: Served by a different server than the React frontend app.
 - **Resources**: Provides various routes for the client-side app to communicate with.
 - **Flexibility**: Can serve multiple client-side apps.
@@ -715,12 +708,12 @@ const fetchUser = (userId) => {
   - **Validate on form submission**: Errors may show too late.
 
 ## Tanstack Query
-- **A library that helps with sending HTTP requests and keeping your frontend UI in sync**.
+- A library that helps with sending HTTP requests and keeping your frontend UI in sync.
 - **Important Note**: Tanstack Query does not send HTTP requests on its own. You need to write the code for the actual HTTP request.
 - **Features**: Manages data, errors, caching, and more after you handle the HTTP request.
 
 ## TypeScript
-- **A superset of JavaScript that adds static typing**.
+- A superset of JavaScript that adds static typing.
 - **Benefits**: Helps catch errors at compile-time rather than at runtime, enhances code quality and maintainability.
 
 ## Testing in React
